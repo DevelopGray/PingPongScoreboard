@@ -152,7 +152,7 @@ html body {
     transform: rotate(20deg);
 }
 
-.button-flash {
+.button-flash:enabled:before {
     left: 190px;
     transition: all .5s;
 }
