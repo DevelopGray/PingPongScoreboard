@@ -51,7 +51,7 @@ html body {
 #title h1 {
     padding: 0 12px 0 12px;
     margin: 0 0 0 0;
-    font-size: 32px;
+    font-size: 1.5em;
     color: #443742;
     font-family: oswald;
 }
@@ -128,7 +128,7 @@ html body {
 .button {
     width: 25%;
     height: 48px;
-    font-size: 1em;
+    font-size: 0.75em;
     margin: 0 4px 0 4px;
     font-family: oswald;
     border: none;
