@@ -6,8 +6,8 @@ body {
 }
 
 .scoreboard {
-    height: 40.75rem;
-    width: 35rem;
+    height: 60.37vh;
+    width: 29.167vw;
     background-color: #443742;
     margin: auto;
     margin-top: 6rem;
@@ -16,8 +16,8 @@ body {
 }
 
 #imgDiv {
-    width: 35rem;
-    height: 19.5rem;
+    width: 29.167vw;
+    height: 28.889vh;
     background: url("headerImg.jpg");
     background-size: 125%;
     background-position-x: center;
