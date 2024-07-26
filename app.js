@@ -112,14 +112,18 @@ playTill.addEventListener("change", () => {
   setCookie("maxScore", scores.maxScore, 365);
 });
 
-document.querySelector("#headerImg").addEventListener("touchstart", (e) => {
-  document.querySelector("#headerImg").classList.add("headerImgMove");
+function removeClass(e, c) {
+  e.classList.remove(c);
+}
+const imgHeader = document.querySelector("#headerImg");
+
+imgHeader.addEventListener("touchstart", (e) => {
+  imgHeader.classList.add("headerImgMove");
 });
 
-document.querySelector("#headerImg").addEventListener("touchend", (e) => {
-  document.querySelector("#headerImg").classList.remove("headerImgMove");
+imgHeader.addEventListener("touchend", (e) => {
+  setTimeout(removeClass(imgHeader, "headerImgMove"), 300);
 });
-
 playerOneBtn.addEventListener("touchstart", (e) => {
   playerOneBtn.classList.add("button-flash");
 });
@@ -130,13 +134,13 @@ resetBtn.addEventListener("touchstart", (e) => {
   resetBtn.classList.add("button-flash");
 });
 playerOneBtn.addEventListener("touchend", (e) => {
-  playerOneBtn.classList.remove("button-flash");
+  setTimeout(removeClass(playerOneBtn, "button-flash"), 300);
 });
 playerTwoBtn.addEventListener("touchend", (e) => {
-  playerTwoBtn.classList.remove("button-flash");
+  setTimeout(removeClass(playerTwoBtn, "button-flash"), 300);
 });
 resetBtn.addEventListener("touchend", (e) => {
-  resetBtn.classList.remove("button-flash");
+  setTimeout(removeClass(resetBtn, "button-flash"), 300);
 });
 
 function removeFlipPlayerOne() {
