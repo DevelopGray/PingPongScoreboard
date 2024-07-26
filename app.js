@@ -116,7 +116,7 @@ document.querySelector("#headerImg").addEventListener("touchstart", (e) => {
   document.querySelector("#headerImg").classList.add("headerImgMove");
 });
 
-document.querySelector("#headerImg").addEventListener("touched", (e) => {
+document.querySelector("#headerImg").addEventListener("touchend", (e) => {
   document.querySelector("#headerImg").classList.remove("headerImgMove");
 });
 
