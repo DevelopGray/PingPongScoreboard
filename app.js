@@ -112,6 +112,14 @@ playTill.addEventListener("change", () => {
   setCookie("maxScore", scores.maxScore, 365);
 });
 
+document.querySelector("#headerImg").addEventListener("touchstart", (e) => {
+  document.querySelector("#headerImg").classList.add("headerImgMove");
+});
+
+document.querySelector("#headerImg").addEventListener("touched", (e) => {
+  document.querySelector("#headerImg").classList.remove("headerImgMove");
+});
+
 function removeFlipPlayerOne() {
   playerOneScoreText.innerText = scores.playerOneScore;
   playerOneScoreText.classList.remove("flip");

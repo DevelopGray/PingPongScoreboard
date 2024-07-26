@@ -1,35 +1,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Keeper</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-
-    <div class="scoreboard">
-        <div id="imgDiv">
+    <div class="col"></div>
+    <div class="container" id="scoreboard">
+        <div class="col-8"></div>
+        <div class="" id="imgDiv">
+            <img id="headerImg" src="headerImg.jpg" alt="">
         </div>
-        <div class="title">
+        <div class="" id="title">
             <h1>Ping Pong Score Keeper</h1>
         </div>
-        <div class="scoring">
-            <div id="score">
+        <div class="scoring"">
+            <div class=""" id="score">
                 <p id="player1">0</p>
                 <p id="scoreTo">to</p>
                 <p id="player2">0</p>
             </div>
-            <p id="playToTitle">Playing To</p>
-            <select id="playToNum">
-                <option selected>5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            <p id="instructions">Use the buttons below to keep the score</p>
+            <div id="dataPanel">
+                <p id="playToTitle">Playing To</p>
+                <select id="playToNum">
+                    <option selected>5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <p id="instructions">Use the buttons below to keep the score</p>
+            </div>
         </div>
         <div class="buttonGroup">
             <button type="button" class="button button-blue" id="playerOneBtn">+1 Player 1</button>
@@ -37,6 +43,10 @@
             <button type="button" class="button button-red" id="resetBtn">Reset</button>
         </div>
     </div>
+    <div class="col"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 </html>

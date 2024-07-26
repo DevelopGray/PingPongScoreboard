@@ -1,52 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body {
+html body {
     background-color: rgba(0, 0, 0, 0.80);
     margin: 0;
 }
 
-.scoreboard {
-    height: 652px;
-    width: 560px;
+#scoreboard {
+    height: auto;
+    width: 80%;
+    max-width: 480px;
     background-color: #443742;
     margin: auto;
     margin-top: 96px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     border-radius: 16px;
+    padding: 0;
 }
 
 #imgDiv {
-    width: 560px;
-    height: 312px;
-    background: url("headerImg.jpg");
-    background-size: 125%;
-    background-position: center;
-    background-repeat: no-repeat;
+    overflow: hidden;
     border-radius: 16px 16px 0 0;
-    transition-duration: 250ms;
-    transition-property: background-size, opacity;
 }
 
-#imgDiv:hover {
-    background-size: 175%;
+#headerImg {
+    width: 100%;
+    max-width: 480px;
+    margin: 0;
+    padding: 0;
+    transform: scale(1.1);
+    overflow: hidden;
+    transition-duration: 250ms;
+    transition-property: transform, opacity;
+}
+
+.headerImgMove {
+    transform: scale(1.6);
     opacity: 0.60;
     transition-duration: 250ms;
-    transition-property: background-size, opacity;
+    transition-property: transform, opacity;
 }
 
-img {
-    object-fit: cover;
-    border-radius: 16px;
-}
-
-.title {
+#title {
     padding: 4px;
     background-color: #9EADC8;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
 }
 
-.title h1 {
+#title h1 {
     padding: 0 12px 0 12px;
     margin: 0 0 0 0;
     font-size: 32px;
@@ -58,6 +60,7 @@ img {
     font-size: large;
     color: white;
     padding: none;
+    padding-top: 2%;
     margin: none;
     text-align: center;
     font-family: roboto;
@@ -74,17 +77,17 @@ img {
 #player1,
 #player2 {
     border-radius: 8px;
-    font-size: 80px;
-    margin: 20px 0 20px 0;
-    padding: 0 16px 0 16px;
+    font-size: 3em;
+    margin: 3% 0 3% 0;
+    padding: 0 5% 0 5%;
     display: inline-block;
-    font-weight:bold;
+    font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     background-color: #695666;
 }
 
 #scoreTo {
-    font-size: 24px;
+    font-size: 1.25em;
     margin: 0 0 0 0;
     padding: 0 12px 0 12px;
     display: inline-block;
@@ -93,7 +96,7 @@ img {
 
 #playToTitle,
 #playToNum {
-    font-size: 24px;
+    font-size: 1.25em;
     display: inline;
     margin: none;
     padding: none;
@@ -111,7 +114,7 @@ img {
 #instructions {
     margin: 16px 0 16px 0;
     padding: 0 16px 0 16px;
-    font-size: small;
+    font-size: 0.6em;
     color: fff94f;
 }
 
@@ -119,13 +122,13 @@ img {
     margin-top: 20px;
     align-items: center;
     text-align: center;
+    padding-bottom: 5%;
 }
 
 .button {
-    
-    width: 30%;
+    width: 25%;
     height: 48px;
-    font-size: 28px;
+    font-size: 1em;
     margin: 0 4px 0 4px;
     font-family: oswald;
     border: none;
@@ -136,11 +139,6 @@ img {
     overflow: hidden;
     text-decoration: none;
     text-transform: uppercase;
-}
-
-.button:hover:enabled:before {
-    left: 190px;
-    transition: all .5s;
 }
 
 .button:enabled:before {
@@ -199,57 +197,15 @@ img {
     }
 }
 
-/* Responsive Design */
-@media screen and (max-width: 480px) {
-
-    body,
-    html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
+@media not all and (pointer: coarse) {
+    #headerImg:hover {
+            transform: scale(1.6);
+            opacity: 0.60;
+            transition-duration: 250ms;
+            transition-property: transform, opacity;
     }
-
-    
-    .scoreboard {
-        /* width: 75%;
-        height: 75%; */
-        margin: 0;
-    }
-
-    #imgDiv {
-        width: 100%;
-        height: 25vh;
-        background-size: cover;
-        border-radius: 16px 16px 0 0;
-    }
-
-    .title h1 {
-        font-size: 24px;
-    }
-
-    #player1,
-    #player2 {
-        font-size: 40px;
-        margin: 10px 0;
-    }
-
-    .button {
-        width: 45%;
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .scoring {
-        font-size: medium;
-    }
-
-    #playToTitle,
-    #playToNum {
-        font-size: 18px;
-    }
-
-    #instructions {
-        font-size: smaller;
+    .button:hover:enabled:before {
+        left: 190px;
+        transition: all .5s;
     }
 }
