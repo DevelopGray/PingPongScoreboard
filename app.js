@@ -154,5 +154,8 @@ function resetGame() {
   playerOneBtn.disabled = false;
   playerTwoBtn.disabled = false;
   playTill.disabled = false;
-  deleteAllCookies();
+
+  setCookie("playerOneScore", scores.playerOneScore, 365);
+  setCookie("playerTwoScore", scores.playerTwoScore, 365);
+  setCookie("maxScore", scores.maxScore, 365);
 }
