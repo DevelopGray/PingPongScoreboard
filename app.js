@@ -40,6 +40,7 @@ const playTill = document.querySelector("#playToNum");
 const playerOneBtn = document.querySelector("#playerOneBtn");
 const playerTwoBtn = document.querySelector("#playerTwoBtn");
 const resetBtn = document.querySelector("#resetBtn");
+const imgHeader = document.querySelector("#headerImg");
 
 const checkList = ["playerOneScore", "playerTwoScore", "maxScore"];
 let scores = {
@@ -115,14 +116,13 @@ playTill.addEventListener("change", () => {
 function removeClass(e, c) {
   e.classList.remove(c);
 }
-const imgHeader = document.querySelector("#headerImg");
+
+function removeTouchClass(e, c, t) {
+  setTimeout(() => {e.classList.remove(c);}, t);
+}
 
 imgHeader.addEventListener("touchstart", (e) => {
   imgHeader.classList.add("headerImgMove");
-});
-
-imgHeader.addEventListener("touchend", (e) => {
-  setTimeout(removeClass(imgHeader, "headerImgMove"), 300);
 });
 playerOneBtn.addEventListener("touchstart", (e) => {
   playerOneBtn.classList.add("button-flash");
@@ -134,13 +134,16 @@ resetBtn.addEventListener("touchstart", (e) => {
   resetBtn.classList.add("button-flash");
 });
 playerOneBtn.addEventListener("touchend", (e) => {
-  setTimeout(removeClass(playerOneBtn, "button-flash"), 300);
+  removeTouchClass(playerOneBtn, "button-flash", 300);
 });
 playerTwoBtn.addEventListener("touchend", (e) => {
-  setTimeout(removeClass(playerTwoBtn, "button-flash"), 300);
+  removeTouchClass(playerTwoBtn, "button-flash", 300);
 });
 resetBtn.addEventListener("touchend", (e) => {
-  setTimeout(removeClass(resetBtn, "button-flash"), 300);
+  removeTouchClass(resetBtn, "button-flash", 300);
+});
+imgHeader.addEventListener("touchend", (e) => {
+  removeTouchClass(imgHeader, "headerImgMove", 300);
 });
 
 function removeFlipPlayerOne() {
