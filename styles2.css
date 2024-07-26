@@ -35,10 +35,10 @@ html body {
 }
 
 .headerImgMove {
-    transform: scale(1.6);
-    opacity: 0.60;
-    transition-duration: 250ms;
-    transition-property: transform, opacity;
+    transform: scale(1.6) !important;
+    opacity: 0.60!important;
+    transition-duration: 250ms!important;
+    transition-property: transform, opacity!important;
 }
 
 #title {
