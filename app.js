@@ -120,6 +120,25 @@ document.querySelector("#headerImg").addEventListener("touchend", (e) => {
   document.querySelector("#headerImg").classList.remove("headerImgMove");
 });
 
+playerOneBtn.addEventListener("touchstart", (e) => {
+  playerOneBtn.classList.add("button-flash");
+});
+playerTwoBtn.addEventListener("touchstart", (e) => {
+  playerTwoBtn.classList.add("button-flash");
+});
+resetBtn.addEventListener("touchstart", (e) => {
+  resetBtn.classList.add("button-flash");
+});
+playerOneBtn.addEventListener("touchend", (e) => {
+  playerOneBtn.classList.remove("button-flash");
+});
+playerTwoBtn.addEventListener("touchend", (e) => {
+  playerTwoBtn.classList.remove("button-flash");
+});
+resetBtn.addEventListener("touchend", (e) => {
+  resetBtn.classList.remove("button-flash");
+});
+
 function removeFlipPlayerOne() {
   playerOneScoreText.innerText = scores.playerOneScore;
   playerOneScoreText.classList.remove("flip");

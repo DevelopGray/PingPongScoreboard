@@ -152,6 +152,11 @@ html body {
     transform: rotate(20deg);
 }
 
+.button-flash {
+    left: 190px;
+    transition: all .5s;
+}
+
 .button:disabled {
     background: #838383;
 }
